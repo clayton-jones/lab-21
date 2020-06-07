@@ -1,0 +1,96 @@
+
+$black: #111;
+$white: #eee;
+$blue: rgb(38, 43, 73);
+$moreBlue: rgb(21, 29, 75);
+$gray: rgb(160, 160, 160);
+
+$spacing: 10px;
+
+.App {
+  border: 2px solid black;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  color: $white;
+  background-color: $blue;
+  width: 100%;
+  text-align: center;
+  padding: $spacing 0;
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: $spacing / 2;
+  }
+}
+
+.counter {
+  display: flex;
+  flex-direction: row;
+  background-color: $white;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  
+  .count {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 $spacing;
+
+    p {
+      margin-top: -12px;
+    }
+    section {
+      width: 100%;
+      font-size: 50px;
+      text-align: center;
+    }
+  }
+
+  button {
+    background-color: $black;
+    color: $white;
+    width: 75px;
+    border-radius: 40px;
+    padding: $spacing;
+    font-size: 15px;
+    transition-property: transform, box-shadow;
+    transition-duration: .25s;
+
+    &:hover {
+      background-color: $blue;
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(.85);
+      background-color: $moreBlue;
+      color: $white;
+    }
+  }
+}
+
+.footer {
+  background-color: rgb(160, 160, 160);
+  width: 100%;
+  text-align: center;
+  padding: $spacing+5 0;
+
+  p {
+    margin-bottom: $spacing;
+  }
+  a {
+    margin-top: $spacing;
+    padding: $spacing;
+  }
+}
